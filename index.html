@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var a=prompt("Enter length 1: ");
+        var b=prompt("Enter length 2: ");
+        var c=prompt("Enter length 3: ");
+
+        if(isNaN(a)||isNaN(b)||isNaN(c)){
+            window.alert("The terms you've entered are INVALID. Please try again.");
+        }else{
+            determineTriangle(a, b, c);
+        }
+
+        // (isNaN(a)===false) || (isNaN(b)===false) || (isNaN(c)===false)//
+
+        function determineTriangle(a, b, c){
+            if(a===b && b===c && c===a){
+                window.alert("The triangle is EQUILATERAL.");
+            }else if(a===b || b===c || c===a){
+                window.alert("The triangle is ISOSCELES.");
+            }else if(a!==b!==c){
+                window.alert("The triangle is SCALENE.")
+            }
+        }
+    </script>
+</body>
+</html>
